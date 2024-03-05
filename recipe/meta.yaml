@@ -1,5 +1,5 @@
 {% set name = "wagtail-periodic-review" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wagtail_periodic_review-{{ version }}.tar.gz
-  sha256: b4a30ea889cf50a677252d35f82eb033fa149568161c640dc70bc51491df635b
+  sha256: 409e08eae4924866b2f2b6f64f692e3f21a18e49cbbc82dc41fd45200dad9c14
 
 build:
   noarch: python
