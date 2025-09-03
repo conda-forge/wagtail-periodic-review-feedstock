@@ -1,5 +1,5 @@
 {% set name = "wagtail-periodic-review" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wagtail_periodic_review-{{ version }}.tar.gz
-  sha256: 5df67b512580f128838d5c782c74ed922234daafa478ed19ea133cdc511fc34a
+  sha256: c56e89abcb475e30255510e0be30228761e5ea6c3d6cbad3916637ff44607164
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - wagtail >=5.2
+    - wagtail >=6.3
     - python-dateutil >=2.8,<3.0.0
 
 test:
