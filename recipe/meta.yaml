@@ -1,13 +1,13 @@
 {% set name = "wagtail-periodic-review" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wagtail_periodic_review-{{ version }}.tar.gz
-  sha256: c56e89abcb475e30255510e0be30228761e5ea6c3d6cbad3916637ff44607164
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/wagtail_periodic_review-{{ version }}.tar.gz
+  sha256: ebb589a3f8fd58a0c49025700cc21be6c02b4d9afb9c559c59a876839be1caf9
 
 build:
   noarch: python
@@ -20,8 +20,9 @@ requirements:
     - flit-core >=3.2,<4
     - pip
   run:
+    - django >=5.2
     - python >={{ python_min }}
-    - wagtail >=6.3
+    - wagtail >=7.0
     - python-dateutil >=2.8,<3.0.0
 
 test:
